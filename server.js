@@ -30,10 +30,10 @@ app.use((req, res, next) => {
     next();
 });
 
-// Routes
+
 app.use('/api', schoolRoutes);
 
-// Start the server
+
 app.listen(port,async () => {
     await connectToDatabase();
     logger.info(`Server running on http://localhost:${port}`);
